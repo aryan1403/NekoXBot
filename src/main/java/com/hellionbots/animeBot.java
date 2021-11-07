@@ -3,6 +3,7 @@ package com.hellionbots;
 import com.hellionbots.configuration.cfg;
 import com.hellionbots.Plugins.animeGif;
 import com.hellionbots.Plugins.animeImage;
+import com.hellionbots.Plugins.start;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -16,6 +17,7 @@ public class animeBot extends TelegramLongPollingBot {
         if(update.hasMessage()) {
             new animeImage(update);
             new animeGif(update);
+            new start(update);
         }
     }
 
