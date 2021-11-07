@@ -1,0 +1,19 @@
+{
+    "name": "Neko Anime Bot",
+    "description": "Anime Image/Gif Bot",
+    "repository": "https://github.com/aryan1403/NekoXBot",
+    "success_url": "https://t.me/aryan1403",
+    "stack": "container",
+    "env": {
+        "botToken": {
+            "description": "Token of your bot, from @BotFather.",
+            "value": "",
+            "required": true
+        },
+        "botUsername": {
+            "description": "Bot Username, from @BotFather.",
+            "value": "",
+            "required": true
+        }
+    }
+}
