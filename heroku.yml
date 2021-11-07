@@ -1,0 +1,5 @@
+build:
+  docker:
+    worker: Dockerfile
+run:
+  worker: java -jar target/animebot-1.0-SNAPSHOT-jar-with-dependencies.jar
