@@ -1,18 +1,26 @@
 package com.hellionbots;
 
-import com.hellionbots.Services.cfg;
-
+import com.hellionbots.configuration.cfg;
+import com.hellionbots.Plugins.animeGif;
+import com.hellionbots.Plugins.animeImage;
+import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Message;
-import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class animeBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        
+        if(update.hasMessage()) {
+            new animeImage(update);
+            new animeGif(update);
+        }
+    }
+
+    public String chatId(Update update) {
+        return update.getMessage().getChatId().toString();
     }
 
     public Message sendMessage(Update update, String text) {
