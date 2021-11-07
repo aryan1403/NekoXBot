@@ -1,0 +1,6 @@
+com\hellionbots\animeBot.class
+com\hellionbots\Plugins\animeGif.class
+com\hellionbots\Master.class
+com\hellionbots\App.class
+com\hellionbots\configuration\cfg.class
+com\hellionbots\Plugins\animeImage.class
